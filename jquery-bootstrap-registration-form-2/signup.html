@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Page Title -->
+    <title>Registration Form</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Orbitron|Anton|Cabin|Lato|Fjalla+One|Montserrat|Roboto&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+
+</head>
+<style>
+    body * {
+        font-family: "Verdana", serif;
+    }
+
+    .bg-full {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .card {
+        align-items: center
+    }
+
+    .card-title {
+        font-weight: bolder;
+        font-size: 25px;
+    }
+
+    .bg-dark {
+        background-color: #212121 !important;
+    }
+
+    .fa-lock {
+        color: #212121;
+    }
+
+    .card-body {
+        width: 600px;
+        min-height: 350px;
+        border-radius: 20px;
+        box-shadow: -5px 5px 50px rgba(0, 0, 0, 0.3), 5px -5px 50px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex: 0 0 auto;
+        margin: auto 20px;
+    }
+
+    label[for="customCheck"], input[type="checkbox"] {
+        cursor: pointer;
+    }
+
+    input {
+        font-size: 20px !important;
+        padding: 10px !important;
+    }
+
+    input::placeholder {
+        font-size: 20px !important;
+    }
+
+    button {
+        text-transform: uppercase;
+        padding: 10px 0 !important;
+        font-weight: bolder;
+        font-size: 18px !important;
+        margin-bottom: 30px;
+    }
+
+    .fa-check {
+        color: #fff;
+        left: 17px;
+        top: 26px;
+        font-size: 7px;
+        position: absolute;
+    }
+
+    .input-group-text {
+        color: black;
+    }
+
+    [for="customCheck"] a {
+        text-decoration: none;
+    }
+
+    @media all and (max-width: 600px) {
+        .card-body {
+            width: unset;
+            max-width: 600px;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="card bg-dark bg-full">
+        <article class="card-body bg-light my-auto">
+            <h4 class="card-title mt-4 text-center">Create Account</h4>
+            <p class="text-center mb-4">Get Started With creating Your Free Account</p>
+
+            <form class='mx-4'>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                    <input name="email" class="form-control" placeholder="Enter Username" type="text"
+                        required>
+                </div><!-- form-group// -->
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                    <input name="email" class="form-control" placeholder="Enter Email" type="text"
+                        required>
+                </div><!-- form-group// -->
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                    <input name="password" class="form-control" placeholder="Enter Password" type="password" required>
+                </div><!-- form-group// -->
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-lock"></i><i class="fa fa-check"></i></span>
+                    <input name="password" class="form-control" placeholder="Enter Confirmed Password" type="password" required>
+                </div><!-- form-group// -->
+
+                <div class="custom-control custom-checkbox float-left mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck" name="rem" />
+                    <label class="custom-control-label" for="customCheck">
+                        I accept the <a href="" class="text-dark font-weight-bolder">Terms of Use</a> & 
+                        <a href="" class="text-dark font-weight-bolder">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" name="login" class="btn bg-dark text-white btn-block"> CREATE ACCOUNT </button>
+                </div> <!-- form-group// -->
+            </form>
+        </article>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Site Title -->
+    <title>Signup Form</title>
+
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Google Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+        font-family: "Inter", serif;
+        font-weight: bold;
+        background-color: #f0f0f0;
+    }
+
+    h4 {
+        margin-top: 20px;
+        position: relative;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 30px;
+    }
+
+    h4:before,
+    h4:after {
+        content: "";
+        height: 2px;
+        width: 30%;
+        background: #424242;
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+    }
+
+    h4:before {
+        left: 0;
+    }
+
+    h4:after {
+        right: 0;
+    }
+
+    .signup-card {
+        width: 400px;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #3167eb;
+        border-color: #3167eb;
+        font-weight: bold;
+    }
+
+    .fa-check {
+        color: #fff;
+        left: 17px;
+        top: 18px;
+        font-size: 7px;
+        position: absolute;
+    }
+
+    .togglePassword::before {
+        content: "\f06e";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .togglePassword.show::before {
+        content: "\f070";
+    }
+</style>
+<body>
+    <div class="card signup-card">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Sign Up</h4>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                                <input name="user_first_name" class="form-control" placeholder="First Name" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                                <input name="user_last_name" class="form-control" placeholder="Last Name" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                        <input name="user_name" class="form-control" placeholder="Username" type="text">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </div>
+                        <input name="user_email" class="form-control" placeholder="Email" type="text">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        </div>
+                        <input name="user_password" class="form-control" placeholder="Password" type="password">
+                        <span class="togglePassword"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-lock"></i>
+                                <i class="fa fa-check"></i>
+                            </span>
+                        </div>
+                        <input name="user_confirm_password" class="form-control" placeholder="Confirm Password" type="password">
+                        <span class="togglePassword"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked>
+                        <div class="custom-control-label"> 
+                            I accept the <a href="">Terms of Use</a> & <a href="">Privacy Policy</a>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer text-center">Already have an account? <a href="signin.html">Sign In</a></div>
+    </div>
+    
+    <script>
+        if (document.querySelectorAll(".togglePassword").length) {
+            document.querySelectorAll(".togglePassword").forEach(element => {
+                element.addEventListener("click", function () {
+                    this.classList.toggle("show");
+                    (this.previousElementSibling.getAttribute('type') == "password")
+                    ? this.previousElementSibling.setAttribute("type","text")
+                    : this.previousElementSibling.setAttribute("type","password");
+                });
+            });
+        }
+    </script>
+</body>
+</html>
